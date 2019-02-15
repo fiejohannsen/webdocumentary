@@ -25,23 +25,47 @@ body {
   background-image: url(../images/trappe.jpg);
   background-size: cover;
   width: 100%;
-  height: 100vh;
   background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 
 }
+
+#section1 > #titel {
+  padding-top: 80%;
+  padding-right: 40%;
+  font-size: 40%;
+  text-align: center;
+}
+
+#section1 > .intro-text {
+  font-size: 20%;
+  text-align: center;
+  padding-right: 40%;
+  padding-top: 50%;
+  padding-bottom: 50%;
+}
+
+
 #section2 {
-  background-color: blue;
+  background-color: #FFFFFF;
   height: 100vh;
-
-}
-#section3 {
-  background-color: yellow;
-  height: 100vh;
+  overflow: hidden;
+  margin: 0 auto;
+  left: 0;
+  position: relative;
+  width: 100%;
 
 }
 #video2 {
-  width: 100vh;
-  height: auto;
+  width: 100%;
+  height: 100%;
+}
+
+#section3 {
+  background-image: url(../images/blaatrappe.jpg);
+  background-size: cover;
+  height: 100vh;
 
 }
 
@@ -57,6 +81,15 @@ body {
 
 .text {
   padding: 5em;
+  font-size:
+}
+
+#section1 > .band-text {
+  font-size: 20%;
+  text-align: center;
+  padding-right: 40%;
+  padding-top: 50%;
+  padding-bottom: 50%;
 }
 
 #section5 {
