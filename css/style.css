@@ -1,25 +1,91 @@
-/*CSS document*/
+* {
+    box-sizing: border-box;
+}
 
-/*Insert global rules here - rules that apply for all pages on your site and all device sizes. This could be text color, font type, font-sizes, margin on elements */
+body {
+  width: 100%;
+  margin: 0;
+  scroll-snap-type: mandatory;
+  scroll-snap-points-y: repeat(100vh);
+  scroll-snap-type: y mandatory;
+}
 
-/*COMMENTS WITH CAPITAL LETTERS ARE EASY TO SPOT, SO USE THEM FOR HEADINGS FOR OVERVIEW. IT IS A GOOD IDEA TO HAVE A HEADING FOR YOUR HEADER, NAVIGATION, MAIN AND FOOTER. SEE EXAMPLE BELOW*/
-
-
-/*HEADER*/
-
-/* example where you target the h1 inside the header tag and give it a color and a size */
-header h1{
-color: #ffffff;  
-font-size: 48px;
+.section {
+  width: 100%;
+  height: 100%;
+  scroll-snap-align: start;
+  text-align: center;
+  font-size: 10em;
+  position: relative;
 }
 
 
-/*Main*/
 
-/* example to be deleted*/
-p{
-font-family: Tahoma, Geneva, sans-serif;  
+#section1 {
+  background-image: url(../images/trappe.jpg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+  background-position: top;
+
+}
+#section2 {
+  background-color: blue;
+  height: 100vh;
+
+}
+#section3 {
+  background-color: yellow;
+  height: 100vh;
+
+}
+#video2 {
+  width: 100vh;
+  height: auto;
+
 }
 
+#section4 {
+  font-size: 2em;
+  background-image: url(../images/silke.jpg);
+  background-size: cover;
+  width: 100%;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
 
-/*when you develop mobile first responsive pages, you add rules for different device sizes after all the global rules, starting with the smallest screen size*/
+.text {
+  padding: 5em;
+}
+
+#section5 {
+  background-color: darkcyan;
+  height: 100vh;
+
+}
+#section6 {
+  background-color: pink;
+  height: 100vh;
+
+}
+#section7 {
+  background-color: green;
+  height: 100vh;
+
+}
+#section8 {
+  background-color: darkgreen;
+  height: 100vh;
+
+}
+#section9 {
+  background-color: brown;
+  height: 100vh;
+
+}
+#section10 {
+  background-color: purple;
+  height: 100vh;
+
+}
