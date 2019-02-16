@@ -4,24 +4,20 @@
 
 <head>
   <meta charset="UTF-8">
-  <!--This ensures that the browser can read special signs and characters like the Danish letters æ, ø, å -->
   <meta name="viewport" content="width=device-width, minimum-scale=1.0">
-  <!--This helps avoid that a site displays differently with different screen resolutions -->
 
   <title>Untitled document</title>
-  <!--This title will be the heading on google search and on the tab in the browser. Can contain up to 70 characters-->
   <meta name="description" content="Here you add the description of your content">
-  <!-- this is for search engne optimization - fill in description of the page content. This will usually be the text shown under the heading in a search. Can contain up to 155 characters-->
   <link rel="stylesheet" href="css/style.css">
-  <!--This is a link to the stylesheet. Any rule written in the stylesheet will be used for this page -->
+  <script type="javascript" src="js.js"></script>
 </head>
 
 <body>
 
   <div id="section1" class="section">
     <h1 id="titel">Silke Kirstine <br> Ekmann Kidholm</h1>
-  <p class="intro-text"> Ambitiøs violinist fra musikkonservatoriet i Aarhus <br>
-Optræder i 3 bands</p>
+    <p class="intro-text"> Ambitiøs violinist fra musikkonservatoriet i Aarhus <br>
+      Optræder i 3 bands</p>
   </div>
 
   <div id="section2" class="section">
@@ -35,26 +31,125 @@ Optræder i 3 bands</p>
   </div>
 
   <div id="section4" class="section">
-    <div class="text" id="text1">1</div>
-    <div class="text" id="text2">2</div>
-    <div class="text" id="text3">3</div>
-    <div class="text" id="text4">dfdsfdsf</div>
+    <div class="citat">
+      <p>"Når jeg nogle gange synes, det er lidt hårdt inde på konservatoriet og føler,
+        der er meget at leve op til,
+        så prøver jeg at tænke på nogle gode oplevelser med musikken."</p>
+    </div>
+
   </div>
 
   <div id="section5" class="section">5</div>
   <div id="section6" class="section">6</div>
-  <div id="section7" class="section">Who killed bambi</div>
-  <img src="images/" alt="">
-  <p class="band-text"> Spiller på eksempelvis festivaler - Northside.</p>
-  <div id="section8" class="section">Trio col basso</div>
-  <img src="images/" alt="">
-  <p class="band-text">En gruppe med to veninder som er Silkes roomies. <br>
-    Spiller primært i kirker, på biblioteker, højskoler og efterskoler.</p>
-  <div id="section9" class="section">Natlyst</div>
-  <img src="images/" alt="">
-  <p class="band-text">Eksperimenterende popband. 11 mand. Udgiver album 1. Marts.</p>
+
+  <div id="section7" class="section js-loop">
+    <div id="whokilledbambi">
+    </div>
+    <div id="natlyst">
+    </div>
+    <div id="triocolbasso">
+    </div>
+  </div>
+
   <div id="section10" class="section">Kontaktoplysninger</div>
   <p class="contact"> Mail: <br> Telefonnummer: <br></p>
+
+
+<script>
+
+var doc = window.document,
+  context = doc.querySelector('.js-loop'),
+  clones = context.querySelectorAll('.is-clone'),
+  disableScroll = false,
+  scrollHeight = 0,
+  scrollPos = 0,
+  clonesHeight = 0,
+  i = 0;
+
+function getScrollPos () {
+  return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
+}
+
+function setScrollPos (pos) {
+  context.scrollTop = pos;
+}
+
+function getClonesHeight () {
+  clonesHeight = 0;
+
+  for (i = 0; i < clones.length; i += 1) {
+    clonesHeight = clonesHeight + clones[i].offsetHeight;
+  }
+
+  return clonesHeight;
+}
+
+function reCalc () {
+  scrollPos = getScrollPos();
+  scrollHeight = context.scrollHeight;
+  clonesHeight = getClonesHeight();
+
+  if (scrollPos <= 0) {
+    setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
+  }
+}
+
+function scrollUpdate () {
+  if (!disableScroll) {
+    scrollPos = getScrollPos();
+
+    if (clonesHeight + scrollPos >= scrollHeight) {
+      // Scroll to the top when you’ve reached the bottom
+      setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
+      disableScroll = true;
+    } else if (scrollPos <= 0) {
+      // Scroll to the bottom when you reach the top
+      setScrollPos(scrollHeight - clonesHeight);
+      disableScroll = true;
+    }
+  }
+
+  if (disableScroll) {
+    // Disable scroll-jumping for a short time to avoid flickering
+    window.setTimeout(function () {
+      disableScroll = false;
+    }, 40);
+  }
+}
+
+function init () {
+  reCalc();
+
+  context.addEventListener('scroll', function () {
+    window.requestAnimationFrame(scrollUpdate);
+  }, false);
+
+  window.addEventListener('resize', function () {
+    window.requestAnimationFrame(reCalc);
+  }, false);
+}
+
+if (document.readyState !== 'loading') {
+  init()
+} else {
+  doc.addEventListener('DOMContentLoaded', init, false)
+}
+
+
+
+
+
+
+
+
+// Just for this demo: Center the middle block on page load
+window.onload = function () {
+  setScrollPos(Math.round(clones[0].getBoundingClientRect().top + getScrollPos() - (context.offsetHeight - clones[0].offsetHeight) / 2));
+};
+
+
+</script>
+
 
 
 </body>

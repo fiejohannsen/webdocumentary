@@ -8,6 +8,7 @@ body {
   scroll-snap-type: mandatory;
   scroll-snap-points-y: repeat(100vh);
   scroll-snap-type: y mandatory;
+
 }
 
 .section {
@@ -24,7 +25,6 @@ body {
 #section1 {
   background-image: url(../images/trappe.jpg);
   background-size: cover;
-  width: 100%;
   background-position: top;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -75,16 +75,23 @@ body {
   background-size: cover;
   width: 100%;
   background-position: top;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  height: 100vh;
 }
 
-.text {
+.citat {
+  width: 30%;
+  height: auto;
+  margin-left: 60%;
+  padding-top: 15%;
+}
+
+.citat > p {
   padding: 5em;
-  font-size:
+  font-size:50%;
+  font-style: italic;
 }
 
-#section1 > .band-text {
+#section7 > .band-text {
   font-size: 20%;
   text-align: center;
   padding-right: 40%;
@@ -103,10 +110,46 @@ body {
 
 }
 #section7 {
-  background-color: green;
-  height: 100vh;
+    font-family: sans-serif;
+    -ms-scroll-snap-type: mandatory;
+        scroll-snap-type: mandatory;
+    -ms-scroll-snap-points-y: repeat(100vw);
+        scroll-snap-points-y: repeat(100vw);
+    -ms-scroll-snap-type: x mandatory;
+        scroll-snap-type: x mandatory;
+    overflow-x: scroll;
+    height: 100vh;
+    white-space: nowrap;
+    overflow-y: hidden;
+}
+
+#whokilledbambi {
+  background-color: darkcyan;
+  width: 100vw;
+  height: 100%;
+  scroll-snap-align: start;
+  text-align: center;
+  display: inline-block;
 
 }
+#natlyst {
+  background-color: yellow;
+  width: 100vw;
+  height: 100%;
+  scroll-snap-align: start;
+  text-align: center;
+  display: inline-block;
+}
+#triocolbasso {
+  background-color: cyan;
+  width: 100vw;
+  height: 100%;
+  scroll-snap-align: start;
+  text-align: center;
+  display: inline-block;
+}
+
+
 #section8 {
   background-color: darkgreen;
   height: 100vh;
