@@ -1,157 +1,177 @@
 <!DOCTYPE html>
-<html lang="en">
-<!--Language set to English. Change to da for Danish if needed-->
+<html lang="da">
 
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, minimum-scale=1.0">
+<meta name="viewport" content="width=device-width, minimum-scale=1.0">
+  <title>Silke Kirstine Ekmann Kidholm</title>
 
-  <title>Untitled document</title>
-  <meta name="description" content="Here you add the description of your content">
+  <meta name="description" content="Denne Webdokumentar handler om Silke Kidholm, som er en klassisk violinist. Hun spiller i følgende tre bands: trio col basso, natlyst og who killed bambi">
+
   <link rel="stylesheet" href="css/style.css">
-  <script type="javascript" src="js.js"></script>
+  <script src="js/script.js"></script>
 </head>
 
 <body>
 
-  <div id="section1" class="section">
-    <h1 id="titel">Silke Kirstine <br> Ekmann Kidholm</h1>
-    <p class="intro-text"> Ambitiøs violinist fra musikkonservatoriet i Aarhus <br>
-      Optræder i 3 bands</p>
-  </div>
+<main>
 
-  <div id="section2" class="section">
-    <video id="video2" autoplay>
+  <article id="section1" class="section">
+
+      <div id="arrow-container"> <img class="bounce" id="arrow-img" src="images/down-arrow.png" alt="arrow">
+      </div>
+
+
+
+    <p id="titel">Silke Kirstine<br>Ekmann Kidholm</p>
+    <p class="intro-text">Silke er en ambitiøs violinist fra musikkonservatoriet i Aarhus.
+      </p>
+      <p class="intro-text">Hun er klassisk violinist, men gør sig i en bred vifte af genrer,
+        herunder tango, pop, rock og folkemusik. </p>
+        <p class="intro-text">Den største passion er kammermusik – at spille sammen i mindre grupper.
+        <br> <br> <i>Her har hver musiker sin egen stemme, som bruges til at skabe noget sprudlende
+          og uforudsigeligt i fællesskab med de andre musikere.</i> </p>
+        <p class="intro-text">Silke spiller klassiske kammermusikkoncerter i eksempelvis kirker og
+            musikforeninger, samt indgår som stryger til live bands og indspiller
+            studieindspilninger indenfor pop/rockmusikken.</p>
+  </article>
+
+
+
+  <article id="section2" class="section">
+    <video autoplay muted controls loop id="video2">
       <source src="interview.mp4" type="video/mp4">
     </video>
-  </div>
+    <div class="unmute-button" id="unmute-interview"></div>
 
-  <div id="section3" class="section">
+  </article>
 
-  </div>
-
-  <div id="section4" class="section">
-    <div class="citat">
+  <article id="section3" class="section">
+    <section class="citat">
       <p>"Når jeg nogle gange synes, det er lidt hårdt inde på konservatoriet og føler,
         der er meget at leve op til,
         så prøver jeg at tænke på nogle gode oplevelser med musikken."</p>
+    </section>
+
+  </article>
+
+  <article id="section4" class="section">
+    <video autoplay muted controls loop id="video4">
+      <source src="violinspil.mp4" type="video/mp4">
+    </video>
+    <div class="unmute-button" id="unmute-violinspil"></div>
+
+  </article>
+
+  <article id="section7" class="section">
+        <div id="whokilledbambi">
+          <div class="link-container">
+        <a class="arrow-link-right" href="#natlyst">
+          <img class="arrow-img-right" src="images/right-arrow.png" alt="arrow">
+        </a>
+      </div>
+
+          <div class="horizontal-wrapper">
+
+            <p class="horizontal-overskrift">WHO KILLED BAMBI</p>
+            <p class="horizontal-tekst">
+              WHO KILLED BAMBI består af en gruppe rutinerede strygere, der sammen
+              har specialiseret sig indenfor de rytmiske genrer. Karakteristisk
+              for gruppen er en musikalsk nysgerrighed og trangen til at afprøve
+              nyt og nedbryde grænser. Musikerne har alle rødder i den klassiske
+              musik, hvilket kommer til udtryk i en veludviklet fælles klang.
+              Desuden er alle musikerne velbevandrede indenfor folk, jazz og
+              improvisation, og de ser det som en fordel at kunne integrere den
+              klassiske musiks klangidealer i andre genrer. Siden gruppens første
+              koncert i 2009 har WHO KILLED BAMBI optrådt og indspillet med
+              etablerede danske og udenlandske kunstnere som Pernille Rosendahl,
+              Rod Stewart, Steffen Brandt, Oh Land, Teitur, Father John Misty og
+              mange andre.
+            </p>
+          </div>
+        </div>
+
+        <section id="natlyst">
+          <div class="link-container">
+        <a class="arrow-link-right" href="#triocolbasso">
+          <img class="arrow-img-right" src="images/right-arrow.png" alt="arrow">
+        </a>
+      </div>
+          <div class="horizontal-wrapper natlysttekst">
+            <p class="horizontal-overskrift natlystoverskrift">NATLYST</p>
+            <p class="horizontal-tekst">
+              Natlyst musik- og tekstunivers er forførende, hævngerrigt og går
+              ikke på kompromis. De 11 musikere danner sammen rammerne for natlige
+              eksperimenter, som både kan udfolde sig i omfavnelse og slagsmål.
+              Musikken opstår i forsanger og sangskriver Amanda Drews ærlighed og
+              vokser i mødet mellem strygere, blæsere og rytmegruppe. Med deres
+              debutalbum, MODIG, tager Natlyst det skrøbelige og gør det stærkt i
+              fortællinger om sexualitet, depression og angst.
+            </p>
+          </div>
+        </section>
+
+        <section id="triocolbasso">
+          <div class="link-container">
+        <a class="arrow-link-right" href="#whokilledbambi">
+          <img class="arrow-img-right" src="images/right-arrow.png" alt="arrow">
+        </a>
+      </div>
+          <div class="horizontal-wrapper">
+            <p class="horizontal-overskrift">TRIO COL BASSO</p>
+            <p class="horizontal-tekst">
+              Trio col basso består af tre ambitiøse unge kvinder, som sammen har
+              dannet strygetrioen i november 2014. Fælles for Trio col basso er,
+              at de alle brænder for den klassiske kammermusik, tango og
+              folkemusik. Lige fra første gang trioen spillede sammen, oplevede de
+              en særlig energi, og det stod hurtigt klart for dem, at de skulle
+              spille sammen. <br />
+              <i
+                >“Ud over det særlige samspil og venskab, der er opstået imellem
+                os, er noget af det, der binder os sammen, at vi har en fælles
+                ambition med musikken - nemlig at den skal ville noget. Den skal
+                røre og overraske publikum, og det er det mantra, vi arbejder ud
+                fra - lige fra udvælgelsen af repertoire, gennem vores arbejde med
+                musikken og frem til koncertopførslen.”</i
+              >
+            </p>
+          </div>
+        </section>
+
+        <section id="whokilledbambi-CLONE">
+          <div class="horizontal-wrapper">
+            <p class="horizontal-overskrift">WHO KILLED BAMBI</p>
+            <p class="horizontal-tekst">
+              WHO KILLED BAMBI består af en gruppe rutinerede strygere, der sammen
+              har specialiseret sig indenfor de rytmiske genrer. Karakteristisk
+              for gruppen er en musikalsk nysgerrighed og trangen til at afprøve
+              nyt og nedbryde grænser. Musikerne har alle rødder i den klassiske
+              musik, hvilket kommer til udtryk i en veludviklet fælles klang.
+              Desuden er alle musikerne velbevandrede indenfor folk, jazz og
+              improvisation, og de ser det som en fordel at kunne integrere den
+              klassiske musiks klangidealer i andre genrer. Siden gruppens første
+              koncert i 2009 har WHO KILLED BAMBI optrådt og indspillet med
+              etablerede danske og udenlandske kunstnere som Pernille Rosendahl,
+              Rod Stewart, Steffen Brandt, Oh Land, Teitur, Father John Misty og
+              mange andre.
+            </p>
+          </div>
+        </section>
+      </article>
+
+
+  <article id="section8" class="section">
+    <div class="kontakt">
+      <p id="overskrift-kontakt">Kontaktoplysninger</p>
+      <p id="txt-kontakt">
+        Silke Kirstine Ekmann Kidholm<br>
+        <a id="mail-link" href="mailto:silkekidholm@live.dk">silkekidholm@live.dk</a>
+          23 45 62 71
+      </p>
     </div>
+  </article>
 
-  </div>
-
-  <div id="section5" class="section">5</div>
-  <div id="section6" class="section">6</div>
-
-  <div id="section7" class="section js-loop">
-    <div id="whokilledbambi">
-    </div>
-    <div id="natlyst">
-    </div>
-    <div id="triocolbasso">
-    </div>
-  </div>
-
-  <div id="section10" class="section">Kontaktoplysninger</div>
-  <p class="contact"> Mail: <br> Telefonnummer: <br></p>
-
-
-<script>
-
-var doc = window.document,
-  context = doc.querySelector('.js-loop'),
-  clones = context.querySelectorAll('.is-clone'),
-  disableScroll = false,
-  scrollHeight = 0,
-  scrollPos = 0,
-  clonesHeight = 0,
-  i = 0;
-
-function getScrollPos () {
-  return (context.pageYOffset || context.scrollTop) - (context.clientTop || 0);
-}
-
-function setScrollPos (pos) {
-  context.scrollTop = pos;
-}
-
-function getClonesHeight () {
-  clonesHeight = 0;
-
-  for (i = 0; i < clones.length; i += 1) {
-    clonesHeight = clonesHeight + clones[i].offsetHeight;
-  }
-
-  return clonesHeight;
-}
-
-function reCalc () {
-  scrollPos = getScrollPos();
-  scrollHeight = context.scrollHeight;
-  clonesHeight = getClonesHeight();
-
-  if (scrollPos <= 0) {
-    setScrollPos(1); // Scroll 1 pixel to allow upwards scrolling
-  }
-}
-
-function scrollUpdate () {
-  if (!disableScroll) {
-    scrollPos = getScrollPos();
-
-    if (clonesHeight + scrollPos >= scrollHeight) {
-      // Scroll to the top when you’ve reached the bottom
-      setScrollPos(1); // Scroll down 1 pixel to allow upwards scrolling
-      disableScroll = true;
-    } else if (scrollPos <= 0) {
-      // Scroll to the bottom when you reach the top
-      setScrollPos(scrollHeight - clonesHeight);
-      disableScroll = true;
-    }
-  }
-
-  if (disableScroll) {
-    // Disable scroll-jumping for a short time to avoid flickering
-    window.setTimeout(function () {
-      disableScroll = false;
-    }, 40);
-  }
-}
-
-function init () {
-  reCalc();
-
-  context.addEventListener('scroll', function () {
-    window.requestAnimationFrame(scrollUpdate);
-  }, false);
-
-  window.addEventListener('resize', function () {
-    window.requestAnimationFrame(reCalc);
-  }, false);
-}
-
-if (document.readyState !== 'loading') {
-  init()
-} else {
-  doc.addEventListener('DOMContentLoaded', init, false)
-}
-
-
-
-
-
-
-
-
-// Just for this demo: Center the middle block on page load
-window.onload = function () {
-  setScrollPos(Math.round(clones[0].getBoundingClientRect().top + getScrollPos() - (context.offsetHeight - clones[0].offsetHeight) / 2));
-};
-
-
-</script>
-
-
-
+</main>
 </body>
 
 </html>
